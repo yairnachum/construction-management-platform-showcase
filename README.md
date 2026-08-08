@@ -2,7 +2,7 @@
 
 A production-oriented full-stack application for managing construction projects, budgets, expenses, quotes, schedules, and role-based field workflows.
 
-> **Public showcase:** The production source code is private because the application is actively used by a real business. This repository documents the architecture, engineering decisions, and selected implementation details without exposing business data or secrets.
+> **Public showcase:** The full production repository remains private because the application is actively used by a real business. This repository contains architecture documentation plus carefully sanitized code extracts that demonstrate the engineering without exposing customer data, secrets, or internal business details.
 
 ## What I built
 
@@ -53,6 +53,18 @@ flowchart LR
     C --> J[Sentry / Health Monitoring]
 ```
 
+## Selected public code samples
+
+These are sanitized extracts from the private application, chosen to show different layers of the system:
+
+- [`examples/database/rls-policies.sql`](examples/database/rls-policies.sql) - PostgreSQL Row-Level Security with role and project-membership checks
+- [`examples/backend/projects.ts`](examples/backend/projects.ts) - typed Supabase data access and derived project-budget reads
+- [`examples/testing/project-expenses-browse.spec.ts`](examples/testing/project-expenses-browse.spec.ts) - Playwright coverage for pagination, search, URL state and race-condition edge cases
+- [`examples/devops/Dockerfile`](examples/devops/Dockerfile) - multi-stage Next.js standalone container running as a non-root user
+- [`examples/devops/ci.yml`](examples/devops/ci.yml) - CI structure for type checking, unit tests, local Supabase database tests and Playwright
+
+The extracts are intentionally small enough to review quickly. Production-specific values, business identifiers, secrets and customer data are not included.
+
 ## Engineering highlights
 
 ### Database-first authorization
@@ -67,7 +79,7 @@ The application uses multiple test layers:
 - **pgTAP** for database functions, policies, and migrations
 - **Playwright** for end-to-end browser flows
 
-GitHub Actions runs automated checks on pull requests, with database tests used as a blocking CI signal.
+GitHub Actions runs automated checks on pull requests, with database tests used as a CI gate.
 
 ### Safe schema evolution
 
@@ -97,14 +109,12 @@ Screenshots in this public repository use demo or anonymized data only.
 
 ## Repository scope
 
-This repository intentionally does **not** contain:
+This showcase contains selected sanitized source extracts, but intentionally does **not** publish the complete production application. It excludes:
 
-- Production source code
-- Customer or project data
-- Environment variables or API keys
-- Internal operational documentation
-
-It exists as a technical portfolio of the system I designed and built.
+- Customer, supplier, employee, or project data
+- Environment variables, API keys, tokens, and production configuration
+- Internal business documentation and operational details
+- The full application source tree
 
 ## Author
 
