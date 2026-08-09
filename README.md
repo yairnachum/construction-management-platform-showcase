@@ -105,7 +105,13 @@ Sentry integration and a dedicated health endpoint make application failures vis
 
 Screenshots in this public repository use demo or anonymized data only.
 
-<!-- Add 3-5 screenshots here: dashboard, project budget, schedule, mobile field view, quote workflow. -->
+<img width="3024" height="1614" alt="צילום מסך 2026-08-09 ב-4 28 14" src="https://github.com/user-attachments/assets/7a4ee153-5eb9-4a61-b23e-9f9aea2d1590" />
+<img width="3022" height="1654" alt="צילום מסך 2026-08-09 ב-4 28 51" src="https://github.com/user-attachments/assets/86b13227-3a95-4d0e-99a8-fbf083a9a109" />
+<img width="3018" height="1642" alt="צילום מסך 2026-08-09 ב-4 31 23" src="https://github.com/user-attachments/assets/b89d58da-6df6-49a9-b955-2634b1a4910f" />
+<img width="3022" height="1644" alt="צילום מסך 2026-08-09 ב-4 30 57" src="https://github.com/user-attachments/assets/4f2142f9-370d-4f53-89d3-5362e8c481ae" />
+<img width="3006" height="1630" alt="צילום מסך 2026-08-09 ב-4 30 09" src="https://github.com/user-attachments/assets/7835a615-8178-42e2-84e6-a51a1319ee60" />
+
+
 
 ## Repository scope
 
